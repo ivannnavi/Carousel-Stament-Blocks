@@ -30,11 +30,8 @@
 
 #carousel {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    align-items: stretch;
     border: 1px solid black;
-    padding: 1rem;
-    column-gap: 1rem;
     margin: 2rem 0;
     width: 100%;
 }
@@ -45,10 +42,12 @@
     transition: transform 0.5s ease-in-out;
 }
 
+
 .carousel-container {
     overflow: hidden;
     position: relative;
     width: 100%;
+    max-width: 100%;
 }
 
 .carouselLeft,
@@ -57,6 +56,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex: 1 1 300px;
+
 }
 
 .carouselLeft {
@@ -74,6 +75,7 @@
     display: flex;
     flex: 0 0 100%;
     justify-content: center;
+    max-width: 100%;
 }
 
 .carousel-button {
@@ -135,25 +137,41 @@
 @media(min-width: 40.625rem) {}
 
 @media(min-width: 48rem) {
-    .carouselLeft {
-        min-width: 100%;
+    #carousel {
+        flex-direction: column;
+        flex-wrap: wrap;
     }
 
-    .carousel-container {}
+    .carousel {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .carouselLeft,
+    .carouselRight {
+        width: 100%;
+    }
+
 }
 
 @media(min-width: 61.25rem) {
+    #carousel {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
     .carouselLeft {
         min-width: 400px;
+    }
+
+    .carousel {
+        max-width: 50vw;
+        width: 100%;
     }
 
     #quote {
         max-width: 100%;
         margin: 2rem;
-    }
-
-    #carousel {
-        flex-direction: row;
     }
 }
 
