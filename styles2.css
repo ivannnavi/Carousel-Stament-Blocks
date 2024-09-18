@@ -89,6 +89,8 @@
     border: 1px solid #D4D4D4;
     margin: 2rem 0;
     width: 100%;
+    flex-direction: column;
+    height: auto;
 }
 
 .carousel {
@@ -116,16 +118,28 @@
 }
 
 .carouselLeft {
-    background: rgb(224, 224, 224);
+    background: #F7F3F4;
     height: 100%;
     padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .carouselRight {
-    background: rgb(236, 236, 255);
+    background: #ffffff;
     align-items: center;
     width: 100%;
     padding: 2rem 0;
+}
+
+.carouselLeft h3 {
+    margin-bottom: 0;
+}
+
+.carouselLeft p {
+    margin: 1rem 0 2rem 0;
 }
 
 .carousel-page {
@@ -163,7 +177,7 @@
     padding: 10px;
     box-sizing: border-box;
     text-align: center;
-    width: 172px;
+    width: 192px;
 }
 
 .person h6 {
@@ -174,7 +188,7 @@
 }
 
 .person img {
-    width: 96px;
+    width: 112px;
     max-width: 100%;
     border-radius: 50%;
 }
@@ -185,6 +199,18 @@
 }
 
 /* Media Queries */
+
+@media(min-width: 15rem) {
+
+    .person {
+        width: 124px;
+    }
+
+    .person img {
+        width: 72px;
+    }
+}
+
 
 @media(min-width: 30rem) {
     #carousel {
@@ -203,13 +229,30 @@
         width: 60%;
         max-width: 100%;
     }
+
+    .person {
+        width: 148px;
+    }
+
+    .person img {
+        width: 84px;
+    }
 }
 
-@media(min-width: 40.625rem) {}
+@media(min-width: 40.625rem) {
+    .person {
+        width: 192px;
+    }
+
+    .person img {
+        width: 112px;
+    }
+}
 
 @media(min-width: 48rem) {
     #carousel {
         flex-direction: column;
+        height: auto;
     }
 
     .carousel {
@@ -231,6 +274,7 @@
 @media(min-width: 61.25rem) {
     #carousel {
         flex-direction: row;
+        height: 300px;
     }
 
     .carousel-page {
