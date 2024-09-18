@@ -2,13 +2,41 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    padding: 1rem;
 }
 
 .wrapper a {
     background-color: #53c2be;
     text-transform: uppercase;
     width: fit-content;
-    padding: 0 1rem;
+    padding: 0.5rem 1rem;
+    font-family: 'Neutra', serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#quote h3,
+#carousel h3,
+#quote h6,
+#carousel h6 {
+    font-family: 'Neutra', serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#carousel h6 {
+    margin-bottom: 2px;
+}
+
+#quote h3,
+#carousel h3 {
+    font-size: 1.5rem;
+}
+
+#quote p,
+#carousel p {
+    font-family: 'Neutra', serif;
+    font-weight: normal;
 }
 
 #quote {
@@ -16,22 +44,49 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    border: 1px solid black;
-    padding: 1rem;
-    margin: 1rem;
+    border: 1px solid #D4D4D4;
     width: 100%;
+    background:
+        repeating-linear-gradient(0deg,
+            rgba(255, 255, 255, 0) 0,
+            rgba(255, 255, 255, 0) 20px,
+            #ccdee7 20px,
+            #ccdee7 21px),
+        repeating-linear-gradient(90deg,
+            rgba(255, 255, 255, 0) 0,
+            rgba(255, 255, 255, 0) 20px,
+            #ccdee7 20px,
+            #ccdee7 21px);
+}
+
+#quote a {
+    margin-top: 1rem;
+}
+
+#quote p {
+    margin-bottom: 2rem;
 }
 
 #quote img {
-    width: 100%;
-    max-height: 300px;
-    object-fit: cover;
+    margin-bottom: -2.5rem;
+    z-index: 1;
+    width: 60%;
+}
+
+#mission {
+    background: white;
+    padding: 3rem 3rem 4rem 3rem;
+    border-top: 1px solid #53c2be;
+}
+
+#mission a {
+    margin-top: 1rem;
 }
 
 #carousel {
     display: flex;
-    align-items: stretch;
-    border: 1px solid black;
+    align-items: center;
+    border: 1px solid #D4D4D4;
     margin: 2rem 0;
     width: 100%;
 }
@@ -61,14 +116,16 @@
 }
 
 .carouselLeft {
-    max-width: 500px;
     background: rgb(224, 224, 224);
+    height: 100%;
+    padding: 0 2rem;
 }
 
 .carouselRight {
     background: rgb(236, 236, 255);
     align-items: center;
-    width: 100%
+    width: 100%;
+    padding: 2rem 0;
 }
 
 .carousel-page {
@@ -76,17 +133,18 @@
     flex: 0 0 100%;
     justify-content: center;
     max-width: 100%;
+    padding: 0 3rem;
+    flex-wrap: wrap;
 }
 
 .carousel-button {
     position: absolute;
     top: 46.25%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
     border: none;
     padding: 10px;
     cursor: pointer;
+    background: none;
 }
 
 .carousel-button.prev {
@@ -132,6 +190,19 @@
     #carousel {
         flex-direction: column;
     }
+
+    .carousel-page {
+        justify-content: space-evenly;
+    }
+
+    .wrapper {
+        padding: 1rem;
+    }
+
+    #quote img {
+        width: 60%;
+        max-width: 100%;
+    }
 }
 
 @media(min-width: 40.625rem) {}
@@ -139,7 +210,6 @@
 @media(min-width: 48rem) {
     #carousel {
         flex-direction: column;
-        flex-wrap: wrap;
     }
 
     .carousel {
@@ -147,27 +217,34 @@
         width: 100%;
     }
 
+    .carousel-page {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
     .carouselLeft,
     .carouselRight {
         width: 100%;
     }
-
 }
 
 @media(min-width: 61.25rem) {
     #carousel {
         flex-direction: row;
+    }
+
+    .carousel-page {
         flex-wrap: nowrap;
     }
 
     .carouselLeft {
-        min-width: 400px;
+        width: 400px;
     }
 
-    .carousel {
-        max-width: 50vw;
-        width: 100%;
+    .carouselRight {
+        width: 800px;
     }
+
 
     #quote {
         max-width: 100%;
@@ -178,12 +255,13 @@
 @media(min-width: 64rem) {
 
     #quote {
-        max-width: 600px;
+        max-width: 588px;
         margin: 2rem;
     }
 
     #quote img {
-        max-width: 25vw;
+
+        width: 55%;
     }
 
     #carousel {
