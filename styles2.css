@@ -45,6 +45,7 @@
     align-items: center;
     text-align: center;
     border: 1px solid #D4D4D4;
+    padding-top: 1.25rem;
     width: 100%;
     background:
         repeating-linear-gradient(0deg,
@@ -70,7 +71,8 @@
 #quote img {
     margin-bottom: -2.5rem;
     z-index: 1;
-    width: 60%;
+    width: 100%;
+    max-width: 200px;
 }
 
 #mission {
@@ -203,7 +205,7 @@
 @media(min-width: 15rem) {
 
     .person {
-        width: 124px;
+        width: 132px;
     }
 
     .person img {
@@ -227,7 +229,6 @@
 
     #quote img {
         width: 60%;
-        max-width: 100%;
     }
 
     .person {
@@ -305,7 +306,7 @@
 
     #quote img {
 
-        width: 55%;
+        width: 50%;
     }
 
     #carousel {

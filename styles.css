@@ -68,6 +68,8 @@
 
 #quote {
     border: 1px solid #D4D4D4;
+    display: flex;
+    padding: 1.25rem 0;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
@@ -96,9 +98,10 @@
 }
 
 #quote img {
-    max-width: 236px;
+    max-width: 200px;
     width: 100%;
     margin-bottom: -2.75rem;
+    z-index: 1;
 }
 
 #carousel {
@@ -190,7 +193,24 @@
     margin: 0;
 }
 
+#layoutImage {
+    height: auto;
+}
+
+
+
 /* Media Queries */
+
+@media(min-width: 15rem) {
+    #layoutImage {
+        height: 24px;
+    }
+
+    #mission {
+        border-bottom: 1px solid #d4d4d4;
+    }
+
+}
 
 @media(min-width: 30rem) {
     #wrapper {
@@ -206,11 +226,31 @@
     .carousel {
         width: 100%;
     }
+
+    #layoutImage {
+        height: 24px;
+    }
+
+    #mission {
+        border-bottom: 1px solid #d4d4d4;
+    }
 }
 
-@media(min-width: 40.625rem) {}
+@media(min-width: 40.625rem) {
+    #layoutImage {
+        height: 24px;
+    }
+
+    #mission {
+        border-bottom: 1px solid #53c2be;
+    }
+}
 
 @media(min-width: 48rem) {
+    #layoutImage {
+        height: auto;
+    }
+
     #wrapper {
         padding: 1rem 2.5rem;
     }
