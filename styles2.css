@@ -46,17 +46,7 @@
     text-align: center;
     border: 1px solid #D4D4D4;
     width: 100%;
-    background:
-        repeating-linear-gradient(0deg,
-            rgba(255, 255, 255, 0) 0,
-            rgba(255, 255, 255, 0) 20px,
-            #ccdee7 20px,
-            #ccdee7 21px),
-        repeating-linear-gradient(90deg,
-            rgba(255, 255, 255, 0) 0,
-            rgba(255, 255, 255, 0) 20px,
-            #ccdee7 20px,
-            #ccdee7 21px);
+    overflow-x: hidden;
 }
 
 #quote a {
@@ -70,13 +60,12 @@
 #quote img {
     margin-bottom: -2.5rem;
     z-index: 1;
-    width: 60%;
+    max-height: 200px;
 }
 
 #mission {
     background: white;
     padding: 3rem 3rem 4rem 3rem;
-    border-top: 1px solid #53c2be;
 }
 
 #mission a {
@@ -225,10 +214,7 @@
         padding: 1rem;
     }
 
-    #quote img {
-        width: 60%;
-        max-width: 100%;
-    }
+    #quote img {}
 
     .person {
         width: 148px;
@@ -303,10 +289,7 @@
         margin: 2rem;
     }
 
-    #quote img {
-
-        width: 55%;
-    }
+    #quote img {}
 
     #carousel {
         max-width: 1200px;
