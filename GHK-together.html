@@ -8183,29 +8183,6 @@
             container.appendChild(groupDiv);
         }
 
-        // for (let i = 0; i < data.length; i += 1) {
-
-        //     const itemDiv = document.createElement('div');
-        //     itemDiv.className = 'person';
-
-        //     const image = document.createElement('img');
-        //     image.src = `${data[i].image_url}`;
-        //     itemDiv.appendChild(image);
-
-        //     const name = document.createElement('h6');
-        //     name.innerHTML = `${data[i].name}`;
-        //     itemDiv.appendChild(name);
-
-        //     const title = document.createElement('p');
-        //     title.innerHTML = `${data[i].title}`;
-        //     itemDiv.appendChild(title);
-
-        //     container.appendChild(itemDiv);
-
-
-        //     container.appendChild(itemDiv);
-        // }
-
         /* --------- SET UP Carousel ------------ */
 
 
@@ -8232,6 +8209,27 @@
                 updateCarousel();
             }
         });
+
+        window.addEventListener('resize', function () {
+            const minWidth = 30 * 16; // 30rem in pixels
+            const groups = document.querySelectorAll('.carousel-page');
+
+            groups.forEach(group => {
+                const items = group.children;
+                if (window.innerWidth <= minWidth) {
+                    for (let k = 0; k < items.length; k++) {
+                        items[k].style.display = k < 2 ? 'flex' : 'none';
+                    }
+                } else {
+                    for (let k = 0; k < items.length; k++) {
+                        items[k].style.display = 'flex';
+                    }
+                }
+            });
+        });
+
+        // Trigger the event listener on initial load to set the correct display
+        window.dispatchEvent(new Event('resize'));
 
     </script>
 
