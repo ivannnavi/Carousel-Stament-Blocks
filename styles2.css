@@ -1,3 +1,33 @@
+@font-face {
+    font-family: 'Neutra';
+    src: url('https://www.goodhousekeeping.com/_assets/design-tokens/goodhousekeeping/static/fonts/Neutra2Text_bold.c55d597.woff2') format('woff2');
+    font-weight: bold;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neutra';
+    src: url('https://www.goodhousekeeping.com/_assets/design-tokens/goodhousekeeping/static/fonts/Neutra2Text_book.b25bcd9.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Archer';
+    src: url('https://www.goodhousekeeping.com/_assets/design-tokens/goodhousekeeping/static/fonts/ArcherSSm-Medium_Web.219548a.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --primary-color: #53c2be;
+    --border-color: #D4D4D4;
+    --background-light: #f8f3f4;
+    --background-white: #ffffff;
+    --font-neutra: 'Neutra', serif;
+}
+
 .wrapper {
     width: 100%;
     display: flex;
@@ -6,11 +36,11 @@
 }
 
 .wrapper a {
-    background-color: #53c2be;
+    background-color: var(--primary-color);
     text-transform: uppercase;
     width: fit-content;
     padding: 0.5rem 1rem;
-    font-family: 'Neutra', serif;
+    font-family: var(--font-neutra);
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -19,7 +49,7 @@
 #carousel h3,
 #quote h6,
 #carousel h6 {
-    font-family: 'Neutra', serif;
+    font-family: var(--font-neutra);
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -35,7 +65,7 @@
 
 #quote p,
 #carousel p {
-    font-family: 'Neutra', serif;
+    font-family: var(--font-neutra);
     font-weight: normal;
 }
 
@@ -44,7 +74,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    border: 1px solid #D4D4D4;
+    border: 1px solid var(--border-color);
     width: 100%;
     overflow-x: hidden;
 }
@@ -64,7 +94,7 @@
 }
 
 #mission {
-    background: white;
+    background: var(--background-white);
     padding: 3rem 3rem 4rem 3rem;
 }
 
@@ -75,7 +105,7 @@
 #carousel {
     display: flex;
     align-items: center;
-    border: 1px solid #D4D4D4;
+    border: 1px solid var(--border-color);
     margin: 2rem 0;
     width: 100%;
     flex-direction: column;
@@ -117,7 +147,7 @@
 }
 
 .carouselRight {
-    background: #ffffff;
+    background: var(--background-white);
     align-items: center;
     width: 100%;
     padding: 2rem 0;
@@ -170,7 +200,7 @@
 }
 
 .person h6 {
-    font-family: 'Neutra Display', serif;
+    font-family: var(--font-neutra);
     font-size: 0.875rem;
     text-transform: uppercase;
     margin: 8px 0;

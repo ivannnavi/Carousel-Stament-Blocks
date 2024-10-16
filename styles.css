@@ -5,8 +5,6 @@
     font-display: swap;
 }
 
-/* mic check working in the browser */
-
 @font-face {
     font-family: 'Neutra';
     src: url('https://www.goodhousekeeping.com/_assets/design-tokens/goodhousekeeping/static/fonts/Neutra2Text_book.b25bcd9.woff2') format('woff2');
@@ -22,6 +20,14 @@
     font-display: swap;
 }
 
+:root {
+    --primary-color: #53c2be;
+    --border-color: #D4D4D4;
+    --background-light: #f8f3f4;
+    --background-white: #ffffff;
+    --font-neutra: 'Neutra', serif;
+}
+
 #wrapper {
     width: 100%;
     display: flex;
@@ -31,23 +37,23 @@
 }
 
 #wrapper a {
-    background-color: #53c2be;
+    background-color: var(--primary-color);
     text-transform: uppercase;
     width: fit-content;
     padding: 0.5rem 1rem;
-    font-family: 'Neutra', serif;
+    font-family: var(--font-neutra);
     font-weight: bold;
     text-transform: uppercase;
 }
 
 #wrapper p {
-    font-family: 'Neutra', serif;
+    font-family: var(--font-neutra);
     font-weight: normal;
 }
 
 #wrapper h3,
 #wrapper h6 {
-    font-family: 'Neutra', serif;
+    font-family: var(--font-neutra);
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -65,13 +71,13 @@
     column-gap: 0;
     grid-row-gap: 1rem;
     width: 100%;
-    background: white;
+    background: var(--background-white);
 }
 
 #quote {
-    border: 1px solid #D4D4D4;
+    border: 1px solid var(--border-color);
     overflow-x: hidden;
-    background: #f8f3f4;
+    background: var(--background-light);
     display: grid;
     place-items: center;
     align-items: start;
@@ -96,12 +102,11 @@
 }
 
 #carousel {
-    border: 1px solid #D4D4D4;
+    border: 1px solid var(--border-color);
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #F7F3F4;
-    /* padding-top: 1rem; */
 }
 
 #carousel h3 {
@@ -120,8 +125,8 @@
     overflow: hidden;
     display: flex;
     flex-direction: row;
-    background-color: white;
-    border-top: 1px solid #53c2be;
+    background-color: var(--background-white);
+    border-top: 1px solid var(--primary-color);
 }
 
 .carousel {
@@ -167,7 +172,7 @@
 }
 
 .person h6 {
-    font-family: 'Neutra Display', serif;
+    font-family: var(--font-neutra);
     font-size: 0.875rem;
     text-transform: uppercase;
     margin: 8px 0;
@@ -190,21 +195,26 @@
     #wrapper {
         padding: 1rem 1rem;
     }
-        .person img {
+
+    .person img {
         width: 75%;
         max-width: 112px;
     }
+
     #together-container {
         max-width: 100%;
         grid-row-gap: 2rem;
 
     }
+
     .carousel {
         width: 100%;
     }
+
     .carousel-button img {
         width: 24px;
     }
+
     .carousel-button {
         padding: 0;
     }
@@ -214,13 +224,16 @@
     .person {
         width: calc((100% / 3) - 50px);
     }
+
     .person img {
         width: 50%;
         max-width: 96px;
     }
-        .carousel-button img {
+
+    .carousel-button img {
         width: 28px;
     }
+
     .carousel-button {
         padding: 10px;
     }
@@ -230,6 +243,7 @@
     #wrapper {
         padding: 1rem 2.5rem;
     }
+
     #quote {
         margin-right: 0;
     }
