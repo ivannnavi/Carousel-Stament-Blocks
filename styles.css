@@ -5,6 +5,8 @@
     font-display: swap;
 }
 
+/* mic check working in the browser */
+
 @font-face {
     font-family: 'Neutra';
     src: url('https://www.goodhousekeeping.com/_assets/design-tokens/goodhousekeeping/static/fonts/Neutra2Text_book.b25bcd9.woff2') format('woff2');
@@ -99,7 +101,7 @@
     flex-direction: column;
     align-items: center;
     background-color: #F7F3F4;
-    padding-top: 1rem;
+    /* padding-top: 1rem; */
 }
 
 #carousel h3 {
@@ -161,7 +163,7 @@
     padding: 10px;
     box-sizing: border-box;
     text-align: center;
-    width: 152px;
+    width: 162px;
 }
 
 .person h6 {
@@ -188,29 +190,46 @@
     #wrapper {
         padding: 1rem 1rem;
     }
-
+        .person img {
+        width: 75%;
+        max-width: 112px;
+    }
     #together-container {
         max-width: 100%;
         grid-row-gap: 2rem;
 
     }
-
     .carousel {
         width: 100%;
     }
+    .carousel-button img {
+        width: 24px;
+    }
+    .carousel-button {
+        padding: 0;
+    }
 }
 
-@media(min-width: 40.625rem) {}
+@media(min-width: 40.625rem) {
+    .person {
+        width: calc((100% / 3) - 50px);
+    }
+    .person img {
+        width: 50%;
+        max-width: 96px;
+    }
+        .carousel-button img {
+        width: 28px;
+    }
+    .carousel-button {
+        padding: 10px;
+    }
+}
 
 @media(min-width: 48rem) {
     #wrapper {
         padding: 1rem 2.5rem;
     }
-
-    #together-container {
-        grid-template-columns: 1fr;
-    }
-
     #quote {
         margin-right: 0;
     }
@@ -218,21 +237,17 @@
     #carousel {
         margin-left: 0;
     }
-
-    .carousel {
-        width: 100vw;
-    }
 }
 
 @media(min-width: 61.25rem) {
     #wrapper {
-        padding: 1rem 0;
+        /* padding: 2rem 0; */
     }
 
     #together-container {
-        grid-template-columns: 50% 50%;
-        grid-row-gap: 0;
+        grid-template-columns: 1fr;
     }
+
 
     #quote {
         margin-right: 0.5rem;
@@ -245,11 +260,25 @@
     .carousel {
         width: 100%;
     }
+
+    .person {
+        width: calc((100% / 3) - 20px);
+    }
+
 }
 
 @media(min-width: 64rem) {
     #together-container {
         max-width: 1200px;
+    }
+
+    #together-container {
+        grid-template-columns: 50% 50%;
+        grid-row-gap: 0;
+    }
+
+    .person {
+        width: calc((100% / 3) - 20px);
     }
 }
 

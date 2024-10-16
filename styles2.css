@@ -192,11 +192,12 @@
 @media(min-width: 15rem) {
 
     .person {
-        width: 124px;
+        width: 50%;
     }
 
     .person img {
-        width: 72px;
+        width: 50%;
+        max-width: 96px;
     }
 }
 
@@ -211,7 +212,7 @@
     }
 
     .wrapper {
-        padding: 1rem;
+        padding: rem;
     }
 
     #quote img {}
@@ -227,11 +228,12 @@
 
 @media(min-width: 40.625rem) {
     .person {
-        width: 192px;
+        width: calc((100/2)-50px);
     }
 
     .person img {
-        width: 112px;
+        width: 80%;
+        max-width: 256px;
     }
 }
 
@@ -283,6 +285,9 @@
 }
 
 @media(min-width: 64rem) {
+    .wrapper {
+        padding: 2rem;
+    }
 
     #quote {
         max-width: 588px;
